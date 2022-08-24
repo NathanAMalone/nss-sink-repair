@@ -1,4 +1,4 @@
-
+import { sendRequest } from "./dataAccess.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -14,7 +14,7 @@ mainContainer.addEventListener("click", clickEvent => {
         const dataToSendToAPI = {
             description: userDescription,
             address: userAddress,
-            budget: userBudget,
+            budget: parseInt(userBudget),
             neededBy: userDate
         }
 
